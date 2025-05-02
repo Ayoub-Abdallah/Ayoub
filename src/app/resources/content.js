@@ -1,15 +1,15 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Ayoub",
+  lastName: "BENCHAHLA",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  role: "Software Engineer | CEO, Arbor",
+  avatar: "/images/avatar/picofme (16).png",
+  location: "Africa/Algiers", // IANA time zone for Algeria
+  languages: ["English", "Arabic", "French"],
 };
 
 const newsletter = {
@@ -17,171 +17,135 @@ const newsletter = {
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      Insights on software engineering, AI, and tech innovation. Stay ahead with expert analysis and
+      industry trends.
     </>
   ),
 };
 
 const social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/Ayoub-Abdallah",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/ayoub-ben-chahla-6a8b482a0",
   },
   {
     name: "X",
     icon: "x",
-    link: "",
+    link: "https://x.com/_real_ayoub",
   },
   {
     name: "Email",
     icon: "email",
-    link: "mailto:example@gmail.com",
+    link: "mailto:ayoubabdallah.dev@gmail.com",
   },
 ];
 
 const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Design engineer and builder</>,
+  description: `Software Engineer, Entrepreneur, and Founder of Arbor — pioneering tech solutions in education.`,
+  headline: <> {person.name} Software Engineer | CEO, Arbor</>,
   subline: (
     <>
-      I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      Building cutting-edge software solutions, AI-driven applications, and intuitive user experiences.
+      Passionate about merging technology with creativity.
     </>
   ),
 };
 
 const about = {
   label: "About",
-  title: "About me",
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
-  tableOfContent: {
-    display: true,
-    subItems: false,
-  },
-  avatar: {
-    display: true,
-  },
-  calendar: {
-    display: true,
-    link: "https://cal.com",
-  },
+  title: "About Me",
+  description: `Discover more about ${person.name}, a Software Engineer and CEO of Arbor, a company
+    specializing in education technology solutions.`,
+  tableOfContent: { display: true, subItems: false },
+  avatar: { display: true },
+  calendar: { display: true, link: "https://cal.com" },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        I engineer scalable tech solutions, blending AI, full-stack development, and intuitive UI/UX
+        design. Specializing in Python, JavaScript, React, and Next.js, I bring innovation to software
+        development and product design.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
+        company: "Massinissa International Academy",
         timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        role: "Coach (Data Entry Agents)",
         achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
+          <>Optimized training programs, increasing efficiency by 25%.</>,
+          <>Developed streamlined workflows for faster onboarding.</>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Arbor",
+        timeframe: "2021 - Present",
+        role: "Founder & CEO",
         achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
+          <>Built a leading education technology company, delivering scalable solutions.</>,
+          <>Developed software improving administration for 10+ schools.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "Freelance",
+        timeframe: "2020 - Present",
+        role: "Full-Stack Developer",
+        achievements: [
+          <>Delivered high-performance web & mobile apps across industries.</>,
+          <>Built AI-integrated solutions using React.js, Next.js, and Python.</>,
         ],
         images: [],
       },
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: true,
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Constantine 2 University",
+        description: <>Specialized in AI, Machine Learning, and Data Science.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Self-Study",
+        description: <>Constantly refining expertise in full-stack and AI development.</>,
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Technical Skills",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Full-Stack Development",
+        description: <>Expert in Python, JavaScript, React, and Next.js for scalable software.</>,
+        images: [],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Machine Learning & AI",
+        description: <>Developing AI models with TensorFlow, PyTorch, and advanced data science techniques.</>,
+        images: [],
+      },
+      {
+        title: "UI/UX Design",
+        description: <>Crafting seamless digital experiences with Figma and front-end development.</>,
+        images: [],
       },
     ],
   },
@@ -189,96 +153,35 @@ const about = {
 
 const blog = {
   label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+  title: "Tech, AI & Engineering",
+  description: `Perspectives on AI, software development, and emerging technologies.`,
 };
 
 const work = {
   label: "Work",
-  title: "My projects",
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  title: "Projects",
+  description: `Innovative projects spanning AI, education, and scalable software solutions.`,
 };
 
 const gallery = {
   label: "Gallery",
-  title: "My photo gallery",
-  description: `A photo collection by ${person.name}`,
-  // Images from https://pexels.com
+  title: "My Photo Gallery",
+  description: `Snapshots from my journey in tech and innovation.`,
   images: [
-    {
-      src: "/images/gallery/img-01.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-02.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-03.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-04.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-05.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-06.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-07.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-08.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-09.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-10.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-11.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-12.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-13.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-14.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
+    { src: "/images/gallery/img-01.jpg", alt: "image", orientation: "vertical" },
+    { src: "/images/gallery/img-02.jpg", alt: "image", orientation: "horizontal" },
+    { src: "/images/gallery/img-03.jpg", alt: "image", orientation: "vertical" },
+    { src: "/images/gallery/img-04.jpg", alt: "image", orientation: "horizontal" },
+    { src: "/images/gallery/img-05.jpg", alt: "image", orientation: "horizontal" },
+    { src: "/images/gallery/img-06.jpg", alt: "image", orientation: "vertical" },
+    { src: "/images/gallery/img-07.jpg", alt: "image", orientation: "horizontal" },
+    { src: "/images/gallery/img-08.jpg", alt: "image", orientation: "vertical" },
+    { src: "/images/gallery/img-09.jpg", alt: "image", orientation: "horizontal" },
+    { src: "/images/gallery/img-10.jpg", alt: "image", orientation: "horizontal" },
+    { src: "/images/gallery/img-11.jpg", alt: "image", orientation: "vertical" },
+    { src: "/images/gallery/img-12.jpg", alt: "image", orientation: "horizontal" },
+    { src: "/images/gallery/img-13.jpg", alt: "image", orientation: "horizontal" },
+    { src: "/images/gallery/img-14.jpg", alt: "image", orientation: "horizontal" },
   ],
 };
 

@@ -47,7 +47,7 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            name: home.title,
+            name:  home.title,
             description: home.description,
             url: `https://${baseURL}`,
             image: `${baseURL}/og?title=${encodeURIComponent(home.title)}`,
