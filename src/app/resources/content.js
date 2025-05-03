@@ -83,8 +83,18 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
+        company: "Black & Yellow",
+        timeframe: "2025 - Present",
+        role: "Software Engineer",
+        achievements: [
+          <>Development of CRM and CMS platforms, streamlining workflows and boosting user engagement.</>,
+          <>Design and implementation of machine learning pipelines to integrate AI-driven features, automating key processes and insights.</>,
+        ],
+        images: [],
+      },
+      {
         company: "Massinissa International Academy",
-        timeframe: "2022 - Present",
+        timeframe: "2024 - Present",
         role: "Coach (Data Entry Agents)",
         achievements: [
           <>Optimized training programs, increasing efficiency by 25%.</>,
@@ -94,7 +104,7 @@ const about = {
       },
       {
         company: "Arbor",
-        timeframe: "2021 - Present",
+        timeframe: "2023 - Present",
         role: "Founder & CEO",
         achievements: [
           <>Built a leading education technology company, delivering scalable solutions.</>,
@@ -119,13 +129,17 @@ const about = {
     title: "Education",
     institutions: [
       {
-        name: "Constantine 2 University",
-        description: <>Specialized in AI, Machine Learning, and Data Science.</>,
+        name: "Bachelor's Degree",
+        description: <>Earned a Bachelor's degree in Software Engineering from Constantine 2 University.</>,
+      },
+      {
+        name: "Master's Degree",
+        description: <>Currently pursuing a Master's degree in Data Science and Artificial Intelligence at Constantine 2 University.</>,
       },
       {
         name: "Self-Study",
-        description: <>Constantly refining expertise in full-stack and AI development.</>,
-      },
+        description: <>Constantly refining expertise in full-stack and AI development through self-directed learning.</>,
+      }      
     ],
   },
   technical: {

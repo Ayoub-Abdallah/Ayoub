@@ -1,12 +1,12 @@
 ---
-title: "Automating Design Handovers with a Figma to Code Pipeline"
+title: "Dentalia: A Complete Management Solution for Dental Clinics"
 publishedAt: "2024-04-01"
-summary: "Explore the enduring debate between using spaces and tabs for code indentation, and why this choice matters more than you might think."
+summary: "A complete dental clinic management software built from scratch in under a week — handling appointments, treatments, employees, finances, and more with multilingual support."
 images:
   - "/images/projects/project-01/cover-02.jpg"
   - "/images/projects/project-01/image-03.jpg"
 team:
-  - name: "John Doe"
+  - name: "Ayoub Ben Chahla"
     role: "Software Engineer"
     avatar: "/images/avatar.jpg"
     linkedIn: "https://www.linkedin.com/company/once-ui/"
@@ -15,30 +15,42 @@ link: "https://once-ui.com/"
 
 ## Overview
 
-In this project, I focused on automating the often tedious design handover process. The goal was to create a pipeline that converts Figma designs directly into clean, production-ready code. By integrating design tokens, component libraries, and automated workflows, this solution significantly reduced the time spent on translating design assets into code, while maintaining design consistency across the product.
+Earlier this year, a local dental clinic approached me with a clear problem: their daily operations were fragmented, relying on separate tools for appointments, patient records, employee management, and finances. This led to frequent scheduling conflicts, lost records, and inefficient financial tracking. They needed a single, reliable, and easy-to-use platform to manage their clinic — ideally in multiple languages to accommodate both staff and patients.
+
+In response, I developed **Dentalia**, a full-featured dental clinic management software. The project was built from scratch and delivered in under a week, combining essential clinic management features in one intuitive, multilingual system. From patient appointment scheduling to staff coordination and financial oversight, Dentalia was designed to improve every aspect of clinic operations.
 
 ## Key Features
 
-- **Figma Plugin Integration**: Developed a custom Figma plugin that extracts design tokens such as colors, typography, and spacing values, and exports them in a format compatible with our codebase.
-- **Code Generation**: Integrated an automated process that translates Figma components into React code using a combination of design tokens and pre-built component templates. This allowed developers to focus more on logic and less on repetitive UI coding.
-- **Continuous Sync**: Established a CI/CD pipeline that continuously synchronizes design changes from Figma to the codebase, ensuring design updates are reflected instantly without manual intervention.
-- **Scalable Design System**: Leveraged a design system that remains the single source of truth for both designers and developers, making it easy to maintain consistency even as the product evolves.
+- **Appointment Management**: Dentalia enables patients to book, reschedule, and cancel appointments effortlessly. It sends automated email and SMS notifications for confirmations, reminders, and follow-ups — dramatically reducing no-show rates.
+- **Treatment Records**: Dentists and medical staff can add, update, and track patient treatment histories, prescriptions, and progress notes in real-time, all securely stored in an organized database.
+- **Employee Management**: Staff schedules, attendance records, and responsibilities are centralized, providing the clinic manager with a clear view of daily operations and availability.
+- **Financial Tracking**: The platform records payments, expenses, and income, offering detailed financial summaries and performance indicators to help manage the clinic’s profitability.
+- **Multilingual Interface**: With support for three languages, Dentalia ensures accessibility for a diverse team and patient base, making interactions smoother and more professional.
+- **Client Installation**: After finalizing development, I personally installed and configured the system on-site for the client, customized to their workflow. The client was highly impressed by the speed, reliability, and practicality of the solution.
 
 ## Technologies Used
 
-- **Figma API**: For extracting design tokens and component data directly from the Figma designs.
-- **React and Next.js**: For building the front-end codebase with clean, reusable components.
-- **Styled-Components**: For managing styles dynamically using design tokens.
-- **GitHub Actions**: For automating the pipeline and syncing design changes to the repository.
+- **Express.js**: Powered the back-end API, managing routes, authentication, and database operations.
+- **React**: Delivered a fast, dynamic, and user-friendly front-end interface that adapts to different device screens.
+- **Styled-Components**: Allowed for modular, scalable styling within JavaScript, maintaining a clean and consistent UI across the app.
+- **MongoDB**: Provided a reliable and flexible database for patient records, appointments, and financial data.
+- **NodeMailer / Twilio**: Handled automatic email and SMS notifications to keep both patients and staff updated.
+- **i18next**: Managed multilingual functionality, making it simple to switch between supported languages.
 
 ## Challenges and Learnings
 
-One of the biggest challenges was ensuring that the generated code was clean and maintainable. This involved setting up intelligent mapping between Figma components and React code structures, as well as managing edge cases like responsive design and conditional rendering. Additionally, the continuous synchronization required a robust error-handling system to prevent conflicts during development.
+Completing a project of this scope in under a week was an ambitious challenge. The main difficulty was ensuring that all core modules — appointments, treatments, employees, and finances — were not only functional but also seamlessly integrated. Multilingual support added an extra layer of complexity, requiring a carefully planned UI/UX flow to ensure smooth transitions between languages without breaking the interface.
+
+Another challenge was building a reliable notification system that worked across different channels (email and SMS) and ensured timely delivery without affecting system performance. This involved setting up asynchronous processes and fallback mechanisms to handle potential delivery failures.
+
+Through this project, I reinforced the importance of iterative development and early client feedback. Daily check-ins with the clinic’s staff allowed me to adjust features on the fly and ensure the software truly addressed their operational pain points.
 
 ## Outcome
 
-The automated Figma to code pipeline has streamlined the handoff process, cutting down design-to-development time by 40%. Designers now have more confidence that their designs will be accurately translated into code, and developers can focus on more complex logic and feature development. This project has proven the value of automation in bridging the gap between design and development.
+The result was a significant improvement in the clinic’s workflow. Appointment no-shows decreased by 50% thanks to the automatic reminders. Staff coordination became smoother, with clear schedules and task assignments visible at a glance. Financial data was centralized and easy to access, allowing the clinic manager to make informed decisions quickly.
+
+The client expressed high satisfaction with both the functionality and the fast turnaround time. Dentalia has since become an essential tool for their daily operations, demonstrating how tailored software solutions can dramatically improve efficiency and organization in niche industries like dental healthcare.
+
+This project was a valuable reminder of the power of fast, focused development backed by clear communication and client collaboration.
 
 ---
-
-This project demonstrates your ability to leverage automation and streamline workflows, which is highly relevant for design engineering portfolios focused on efficiency and innovation.
