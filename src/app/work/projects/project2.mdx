@@ -1,0 +1,64 @@
+---
+title: "Holdflow: Real Estate Management in 26 Hours"
+publishedAt: "2023-12-10"
+summary: "Built in under 26 hours at the GDG Constantine Hackathon, Holdflow is a full-stack real estate management platform featuring 3D visualization, real-time updates, neighborhood networking, and ticketing—all in a web and native mobile app."
+images:
+  - "/images/projects/project-holdflow/holdflow.jpg"
+  - "/images/projects/project-holdflow/holdflow2.jpg"
+team:
+  - name: "Ayoub Ben Chahla"
+    role: "Full-Stack Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/ayoub-ben-chahla/"
+link: "https://holdflow.io/"
+---
+
+## Overview
+
+In December 2023, the Google Developers Group of Constantine (GDG Constantine) challenged participants to build a production-ready solution in just **26 hours**. My team and I answered that call by creating **Holdflow**, a seamless real estate management suite designed to simplify finding apartments, monitoring construction progress, and fostering stronger neighborhood communities.
+
+Holdflow’s core idea marries the speed of modern web frameworks with immersive 3D visualization. From the sprint kickoff to the final demo, we architected a solution that keeps prospective tenants, property owners, architects, and neighbors all on the same page—literally and figuratively.
+
+## Key Features
+
+- **Apartment Discovery**  
+  Users browse and filter listings by price, location, and amenities. Interactive 3D walkthroughs let them virtually tour spaces before visiting in person.
+- **Construction Monitoring**  
+  Property owners and architects post real-time construction updates—photos, status logs, and milestone checklists—so stakeholders can follow progress from foundation to finishing touches.
+- **3D Visualization Engine**  
+  Built with Three.js and WebGL, our custom viewer renders floor plans and building models directly in the browser, with smooth pan, zoom, and layer toggles.
+- **Neighborhood Networking**  
+  After move-in, residents can join their building’s Holdflow community: message boards, group chats, and event announcements create stronger, more connected neighborhoods.
+- **Ticketing & Maintenance**  
+  A built-in ticketing system lets residents report issues—plumbing, security, or general repairs—and track resolution status, ensuring prompt follow-up by building management.
+- **Real-Time Updates**  
+  Powered by Socket.io, every chat message, construction log, and ticket status change propagates instantly across web and mobile clients.
+
+## Technologies Used
+
+- **React & Next.js**: Delivered a SSR-optimized web interface with component-driven architecture and fast hot-reload during the hackathon sprint.  
+- **Express.js & Node.js**: Orchestrated RESTful APIs, authentication, and WebSocket channels for sub-second real-time synchronization.  
+- **Three.js**: Rendered detailed 3D building models and floor plans with custom shaders and optimized geometry loaders.  
+- **MongoDB Atlas**: Stored user profiles, listings, construction logs, and ticket data in a flexible, highly available NoSQL database.  
+- **Socket.io**: Enabled live chat, instantaneous construction feeds, and ticketing notifications across all clients.  
+- **Java (Android)**: Crafted a native mobile app with UI elements that mirror the web experience, complete with 3D viewer integration via a WebView bridge.
+
+## Challenges and Learnings
+
+Building Holdflow in under 26 hours meant balancing ambition with pragmatism. Integrating a 3D engine alongside real-time messaging pushed our performance budgets. We optimized Three.js scenes by implementing level-of-detail (LOD) techniques and frustum culling to maintain 60 FPS on mid-range devices.
+
+On the data side, modeling complex relationships—apartments, projects, tickets, and neighbors—required on-the-fly schema adjustments in MongoDB. Iterative API design and Postman scripting helped us rapidly test endpoints while wiring up the React and Java clients in parallel.
+
+Coordinating across specialties—front-end, back-end, 3D, and mobile—underscored the importance of clear contracts and interface definitions. Daily stand-ups turned into hourly syncs as deadlines loomed, teaching us the power of lightweight CI/CD pipelines, even within a hackathon timeframe.
+
+## Outcome
+
+Despite the time crunch, Holdflow emerged as a polished, end-to-end solution:
+
+- **Webapp & Mobile**: A unified experience across browsers and Android devices, with near-identical real-time and 3D capabilities.  
+- **Demo Success**: Our final presentation impressed the GDG judges, showcasing live apartment tours, construction feeds, and a neighborhood ticketing workflow—all in a single demo flow.  
+- **Team Achievement**: In under 24 hours of coding, testing, and iterative design, Abderrahmen, Slimane, Lbsir, and I proved that thoughtful architecture and cross-discipline collaboration can accelerate innovation beyond expectations.
+
+Holdflow stands as a testament to what can be built when technology, teamwork, and tight deadlines collide—pushing the boundaries of real estate management into the future.
+
+---
