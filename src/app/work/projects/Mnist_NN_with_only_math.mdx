@@ -1,0 +1,104 @@
+---
+title: "From Equations to Code: Building a Neural Network from Scratch"
+publishedAt: "2025-05-07"
+summary: "A detailed scientific report on designing and training a neural network from first principles using Python & NumPy, focusing on mathematical rationale and the practical lessons learned through implementation."
+images:
+  - "/images/projects/NN-from-scratch/nn_from_scratch.png"
+  - "/images/projects/NN-from-scratch/learning_curve.png"
+team:
+  - name: "Ayoub Ben Chahla"
+    role: "Software Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/ayoub-benchahla/"
+link: "https://www.linkedin.com/in/ayoub-benchahla/"
+---
+
+## Overview
+
+This project began as a personal challenge: could I understand neural networks so deeply that I could implement one entirely from scratch, using **only math, Python, and NumPy**?
+
+Instead of relying on high-level frameworks like TensorFlow or PyTorch, I dove into the **core mechanics**—from forward propagation and activation functions to backpropagation and gradient descent—all coded manually.
+
+This article unpacks the decisions and discoveries made along the way, with carefully explained reasoning behind every choice in design and implementation.
+
+## Mathematical Foundations
+
+- **Layer Computations**: For any layer `$l$`:  
+  `$ z^{[l]} = W^{[l]}a^{[l-1]} + b^{[l]} $`  
+  `$ a^{[l]} = g(z^{[l]}) $`
+- **Activation Functions**:  
+  - **ReLU**: Chosen for hidden layers to mitigate vanishing gradients.  
+  - **Softmax**: Used at the output to provide class probabilities.
+- **Loss Function**:  
+  Cross-entropy loss with log-stabilization:  
+  `$ L = -\frac{1}{m}\sum_i \sum_k y_k^{(i)}\log(\hat y_k^{(i)} + \varepsilon) $`
+
+## Implementation Highlights
+
+### Weight Initialization
+
+```python
+W = np.random.randn(output_dim, input_dim) * 0.01
+b = np.zeros((output_dim, 1))
+```
+
+**Why:** Scaling by 0.01 ensures that early-layer outputs remain small, reducing the risk of saturation and dead neurons.
+
+### Stable Softmax
+
+```python
+Z_shifted = Z - np.max(Z, axis=0, keepdims=True)
+exp_scores = np.exp(Z_shifted)
+A = exp_scores / np.sum(exp_scores, axis=0, keepdims=True)
+```
+
+**Why:** Subtracting the max value avoids large exponentials, which can lead to numerical overflow.
+
+### Forward and Backward Propagation
+
+```python
+# Forward pass
+Z1 = W1 @ X + b1
+A1 = np.maximum(0, Z1)  # ReLU
+Z2 = W2 @ A1 + b2
+A2 = stable_softmax(Z2)
+
+# Backward pass
+dZ2 = A2 - Y
+dW2 = (dZ2 @ A1.T) / m
+db2 = np.sum(dZ2, axis=1, keepdims=True) / m
+```
+
+**Why:** Full vectorization drastically improves speed, especially for batch training, and makes gradient math cleaner.
+
+## Experimental Setup
+
+- **Dataset**: MNIST handwritten digits (60k train / 10k test), normalized and one-hot encoded.
+- **Architecture**: \[784 → 128 → 64 → 10]
+- **Hyperparameters**: Learning rate = 0.01, batch size = 64, epochs = 20
+- **Environment**: Python 3.9, NumPy 1.23, CPU only
+
+## Results & Learnings
+
+
+- Training Accuracy : 94.1%  
+- Test Accuracy     : 92.7%  
+- Final Loss        : ≈ 0.19 
+
+<p align="center">
+  <img src="/images/projects/NN-from-scratch/learning_curve.png" alt="learning Curve" width="100%"/>
+</p>
+
+### Key Takeaways
+
+- **Numerical stability matters**: Small tweaks like epsilon in `log()` and softmax shifting prevent runtime issues.
+- **Proper initialization**: Helps avoid vanishing gradients while still allowing learnable updates.
+- **Hands-on builds clarity**: Every step—especially debugging backprop—exposed hidden assumptions I’d missed using frameworks.
+
+## Conclusion
+
+This project wasn’t about building the best model—it was about mastering what’s under the hood. By translating pure equations into executable Python, I gained intuition for how neural networks truly learn.
+
+It’s now clear how fragile or powerful a single line of math can be. This kind of ground-up implementation is a must for anyone who wants to do more than just use AI—but really **understand it**.
+
+---
