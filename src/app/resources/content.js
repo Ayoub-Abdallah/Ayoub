@@ -6,7 +6,7 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Software Engineer | CEO, Arbor",
+  role: "Software Engineer | Founder, ORIZON",
   avatar: "/images/avatar/picofme (16).png",
   location: "Africa/Algiers", // IANA time zone for Algeria
   languages: ["English", "Arabic", "French"],
@@ -49,8 +49,8 @@ const social = [
 const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
-  description: `Software Engineer, Entrepreneur, and Founder of Arbor — pioneering tech solutions in education.`,
-  headline: <> {person.name} Software Engineer | CEO, Arbor</>,
+  description: `Software Engineer, Entrepreneur, and Founder of ORIZON — pioneering AI-driven decision systems.`,
+  headline: <> {person.name} Software Engineer | Founder, ORIZON</>,
   subline: (
     <>
       Building cutting-edge software solutions, AI-driven applications, and intuitive user experiences.
@@ -62,8 +62,8 @@ const home = {
 const about = {
   label: "About",
   title: "About Me",
-  description: `Discover more about ${person.name}, a Software Engineer and CEO of Arbor, a company
-    specializing in education technology solutions.`,
+  description: `Discover more about ${person.name}, a Software Engineer and Founder of ORIZON, a company
+    specializing in AI-driven enterprise decision systems.`,
   tableOfContent: { display: true, subItems: false },
   avatar: { display: true },
   calendar: { display: true, link: "https://cal.com" },
@@ -84,7 +84,7 @@ const about = {
     experiences: [
       {
         company: "Black & Yellow",
-        timeframe: "2025 - Present",
+        timeframe: "2025 - 2026",
         role: "Software Engineer",
         achievements: [
           <>Development of CRM and CMS platforms, streamlining workflows and boosting user engagement.</>,
@@ -103,12 +103,24 @@ const about = {
         images: [],
       },
       {
-        company: "Arbor",
-        timeframe: "2023 - Present",
-        role: "Founder & CEO",
+        company: "SkillLab",
+        timeframe: "2025 - Present",
+        role: "Founder",
         achievements: [
-          <>Built a leading education technology company, delivering scalable solutions.</>,
-          <>Developed software improving administration for 10+ schools.</>,
+          <>Founded an AI-powered, game-based learning platform to accelerate tech upskilling.</>,
+          <>Achieved a 95% course completion rate by integrating personalized learning paths.</>,
+        ],
+        images: [
+          { src: "/images/projects/project-skilllab/skilllab.png", alt: "SkillLab", orientation: "horizontal" }
+        ],
+      },
+      {
+        company: "ORIZON",
+        timeframe: "2025 - Present",
+        role: "Founder",
+        achievements: [
+          <>Built an advanced AI decision system using Federated Learning.</>,
+          <>Pioneered secure corporate intelligence and multi-modal risk analysis.</>,
         ],
         images: [],
       },
