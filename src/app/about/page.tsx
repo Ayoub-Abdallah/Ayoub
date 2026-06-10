@@ -255,7 +255,7 @@ export default function About() {
                               enlarge
                               radius="m"
                               //@ts-ignore
-                              sizes={image.width.toString()}
+                              sizes={image.width ? image.width.toString() : "100vw"}
                               //@ts-ignore
                               alt={image.alt}
                               //@ts-ignore
@@ -324,7 +324,7 @@ export default function About() {
                               enlarge
                               radius="m"
                               //@ts-ignore
-                              sizes={image.width.toString()}
+                              sizes={image.width ? image.width.toString() : "100vw"}
                               //@ts-ignore
                               alt={image.alt}
                               //@ts-ignore

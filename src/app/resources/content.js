@@ -83,6 +83,18 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
+        company: "ORIZON",
+        timeframe: "2025 - Present",
+        role: "Founder",
+        achievements: [
+          <>Built an advanced AI decision system using Federated Learning.</>,
+          <>Pioneered secure corporate intelligence and multi-modal risk analysis.</>,
+        ],
+        images: [
+          { src: "/images/projects/project-orizon/dashboard_overview.png", alt: "Orizon Dashboard", width: 16, height: 9 }
+        ],
+      },
+      {
         company: "Black & Yellow",
         timeframe: "2025 - 2026",
         role: "Software Engineer",
@@ -111,18 +123,8 @@ const about = {
           <>Achieved a 95% course completion rate by integrating personalized learning paths.</>,
         ],
         images: [
-          { src: "/images/projects/project-skilllab/skilllab.png", alt: "SkillLab", orientation: "horizontal" }
+          { src: "/images/projects/project-skilllab/skilllab.png", alt: "SkillLab", width: 16, height: 9 }
         ],
-      },
-      {
-        company: "ORIZON",
-        timeframe: "2025 - Present",
-        role: "Founder",
-        achievements: [
-          <>Built an advanced AI decision system using Federated Learning.</>,
-          <>Pioneered secure corporate intelligence and multi-modal risk analysis.</>,
-        ],
-        images: [],
       },
       {
         company: "Freelance",
