@@ -78,7 +78,7 @@ export default function About() {
             "@type": "Person",
             name: person.name,
             jobTitle: person.role,
-            description: about.intro.description,
+            description: about.description,
             url: `https://${baseURL}/about`,
             image: `${baseURL}/images/${person.avatar}`,
             sameAs: social
@@ -100,7 +100,7 @@ export default function About() {
           gap="32"
           hide="s"
         >
-          <TableOfContents structure={structure} about={about} />
+          <TableOfContents structure={structure} about={{ tableOfContent: about.tableOfContent }} />
         </Column>
       )}
       <Flex fillWidth mobileDirection="column" horizontal="center">
@@ -255,7 +255,7 @@ export default function About() {
                               enlarge
                               radius="m"
                               //@ts-ignore
-                              sizes={image.width ? image.width.toString() : "100vw"}
+                              sizes={image.width ? String(image.width) : "100vw"}
                               //@ts-ignore
                               alt={image.alt}
                               //@ts-ignore
@@ -324,7 +324,7 @@ export default function About() {
                               enlarge
                               radius="m"
                               //@ts-ignore
-                              sizes={image.width ? image.width.toString() : "100vw"}
+                              sizes={image.width ? String(image.width) : "100vw"}
                               //@ts-ignore
                               alt={image.alt}
                               //@ts-ignore
