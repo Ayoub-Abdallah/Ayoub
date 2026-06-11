@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Avatar,
   Button,
@@ -73,22 +74,25 @@ export default function About() {
         type="application/ld+json"
         suppressHydrationWarning
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
+          __html: `{
             "@context": "https://schema.org",
             "@type": "Person",
-            name: person.name,
-            jobTitle: person.role,
-            description: about.description,
-            url: `https://${baseURL}/about`,
-            image: `${baseURL}/images/${person.avatar}`,
-            sameAs: social
-              .filter((item) => item.link && !item.link.startsWith("mailto:")) // Filter out empty links and email links
-              .map((item) => item.link),
-            worksFor: {
+            "name": "${person.name}",
+            "jobTitle": "${person.role}",
+            "description": "${about.description.replace(/"/g, '\\"')}",
+            "url": "https://${baseURL}/about",
+            "image": "https://${baseURL}/images/${person.avatar}",
+            "sameAs": [
+              ${social
+                .filter((item) => item.link && !item.link.startsWith("mailto:"))
+                .map((item) => `"${item.link}"`)
+                .join(",\n              ")}
+            ],
+            "worksFor": {
               "@type": "Organization",
-              name: about.work.experiences[0].company || "",
-            },
-          }),
+              "name": "${about.work.experiences[0]?.company || ""}"
+            }
+          }`,
         }}
       />
       {about.tableOfContent.display && (
@@ -178,7 +182,7 @@ export default function About() {
                 {social.map(
                   (item) =>
                     item.link && (
-                        <>
+                        <React.Fragment key={item.name}>
                             <Button
                                 className="s-flex-hide"
                                 key={item.name}
@@ -196,7 +200,7 @@ export default function About() {
                                 icon={item.icon}
                                 variant="secondary"
                             />
-                        </>
+                        </React.Fragment>
                     ),
                 )}
               </Flex>
@@ -303,7 +307,7 @@ export default function About() {
               </Heading>
               <Column fillWidth gap="l">
                 {about.technical.skills.map((skill, index) => (
-                  <Column key={`${skill}-${index}`} fillWidth gap="4">
+                  <Column key={`${skill.title}-${index}`} fillWidth gap="4">
                     <Text variant="heading-strong-l">{skill.title}</Text>
                     <Text variant="body-default-m" onBackground="neutral-weak">
                       {skill.description}

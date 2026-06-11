@@ -153,7 +153,7 @@ const about = {
       {
         name: "Self-Study",
         description: <>Constantly refining expertise in full-stack and AI development through self-directed learning.</>,
-      }      
+      }
     ],
   },
   technical: {
