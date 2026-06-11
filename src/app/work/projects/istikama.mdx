@@ -3,6 +3,7 @@ title: "Istikama: Modernized Educational Platform"
 publishedAt: "2026-05-20"
 summary: "A robust, Moodle-based educational platform tailored for complex academic hierarchies, featuring an interactive course bank, automated tagging, and seamless question management."
 images:
+  - "/images/projects/project-istikama/hero.png"
   - "/images/projects/project-istikama/31.png"
   - "/images/projects/project-istikama/26.png"
   - "/images/projects/project-istikama/32.png"
@@ -18,24 +19,30 @@ link: "https://istikama.onrender.com/"
 
 ## Overview
 
-Istikama is a highly customized and modernized Moodle-based educational ecosystem designed to streamline school management, content delivery, and technical moderation. The platform facilitates a robust workflow for teachers, students, and technical professors across various academic levels. 
+Istikama is a highly customized and modernized Moodle-based educational ecosystem designed to streamline school management, content delivery, and technical moderation. Traditional Learning Management Systems (LMS) often suffer from rigid structures and dated interfaces. The primary goal of the Istikama project was to transform a standard Moodle setup into an intuitive, dynamic, and modern educational application tailored for complex academic hierarchies.
 
-The primary goal of this project was to transform a standard Moodle setup into an intuitive, dynamic, and modern educational application that handles everything from interactive content generation to dynamic status tracking.
+The platform facilitates a robust workflow for teachers, students, and technical professors across various academic levels. It handles everything from interactive course generation and dynamic status tracking to automated tagging, providing a unified experience that feels like a bespoke web application rather than a legacy LMS.
 
-## Key Features
+## The Architecture & Technical Deep-Dive
 
-- **Advanced Content Bank Moderation**: A dynamic, AJAX-driven moderation and tagging system that allows technical professors to oversee educational material intuitively without reloading the page.
-- **Academic Hierarchies**: Sophisticated handling of global question banks categorized by level and subject, ensuring precise permission controls across multiple schools within the platform.
-- **Multilingual Support**: Fully localized in French and Arabic, giving both instructors and learners a native experience when managing or taking courses.
-- **Interactive Quizzes**: Modernized Moodle quiz interfaces seamlessly integrated with the platform's overarching theme to avoid interface breaks and enhance user engagement.
-- **Real-Time Data Dashboard**: Administrative analytics and reporting to track student progress, content moderation status, and overall school performance.
+Rethinking an established platform like Moodle required a careful balance of leveraging its powerful core engine while entirely rewriting the frontend and moderation workflows.
 
-## Technologies Used
+- **Moodle Engine & PHP Core**: Kept the robust backend architecture for user authentication, enrollment handling, and native quiz evaluations. This ensured data integrity and compatibility with global LMS standards.
+- **AJAX State Machines**: Completely replaced traditional multi-step page reloads with dynamic, JavaScript-driven state machines. This modernized the moderation and tagging workflows, allowing technical professors to review and approve content seamlessly.
+- **Dockerized Infrastructure**: Engineered a containerized environment using Docker. This allowed for perfect parity between local development and cloud deployment, smoothing the transition to scalable cloud providers.
+- **Optimized Database Schema**: Enhanced the core MySQL schema to efficiently handle the high throughput of quiz data, detailed user logs, and expansive course content banks.
 
-- **PHP & Moodle Engine**: The core architecture powering the educational content and user management.
-- **JavaScript & AJAX**: For dynamic state machines and modern, app-like interactions without page reloads.
-- **Docker**: Containerized environment for smooth local development and deployment mapping to cloud infrastructure.
-- **MySQL**: Optimized database schema handling high volumes of quiz data, user logs, and course content.
+## Key Features & User Workflows
+
+- **Advanced Content Bank Moderation**: Developed a dynamic moderation dashboard. Technical professors can oversee educational material, tag questions, and manage global course banks intuitively.
+- **Academic Hierarchies**: Implemented sophisticated permission controls capable of handling global question banks categorized by exact academic level and subject, ensuring precise access across multiple schools within the platform.
+- **Multilingual Support**: Fully localized in French and Arabic, giving both instructors and learners a native, comfortable experience when managing or consuming courses.
+- **Interactive Quizzes**: Modernized the native Moodle quiz interfaces. The new UI is seamlessly integrated with the platform's overarching theme, preventing jarring interface breaks and significantly enhancing student engagement.
+- **Real-Time Data Dashboard**: Built administrative analytics and reporting tools to track student progress, content moderation status, and overall school performance at a glance.
+
+## The Outcome
+
+Istikama successfully bridges the gap between powerful institutional software and modern user experience. By heavily customizing the frontend and optimizing the backend workflows, the platform drastically reduced administrative overhead for technical professors while providing students with a clean, engaging learning environment.
 
 ## Platform Preview
 

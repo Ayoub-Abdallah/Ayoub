@@ -3,43 +3,53 @@ title: "Digital Showroom Experience"
 publishedAt: "2026-03-10"
 summary: "An interactive digital showroom designed to seamlessly display products and enhance user engagement through a highly visual interface."
 images:
-  - "/images/projects/project-showroom/Screenshot From 2026-06-10 01-28-40.png"
-  - "/images/projects/project-showroom/Screenshot From 2026-06-10 01-29-04.png"
-  - "/images/projects/project-showroom/Screenshot From 2026-06-10 02-18-16.png"
-  - "/images/projects/project-showroom/Screenshot From 2026-06-10 02-18-33.png"
+  - "/images/projects/project-showroom/hero.png"
+  - "/images/projects/project-showroom/Screenshot 2024-05-18 013444.png"
+  - "/images/projects/project-showroom/Screenshot 2024-05-18 013626.png"
+  - "/images/projects/project-showroom/Screenshot 2024-05-18 013645.png"
 team:
   - name: "Ayoub Ben Chahla"
-    role: "Front-End Engineer"
+    role: "Frontend Developer"
     avatar: "/images/avatar/picofme (16).png"
     linkedIn: "https://www.linkedin.com/in/ayoub-ben-chahla-6a8b482a0"
+link: "https://auto-shoroom.vercel.app/"
 ---
 
 ## Overview
 
-The Digital Showroom project was built to revolutionize how physical products are presented in an online environment. Traditional e-commerce layouts often fail to capture the premium feel of high-end products. This platform bridges that gap by offering a curated, immersive showroom experience.
+The Interactive 3D Showroom is an innovative digital platform engineered to transform the traditional e-commerce experience. By bringing physical products into an interactive digital space, the project aims to solve the inherent limitations of static 2D images in online retail.
 
-Focusing heavily on aesthetics and fluid interactions, the showroom allows users to explore collections with the same engagement they would feel walking through a physical store.
+This project focuses on providing users with a highly immersive, performant, and engaging way to explore complex products—such as automotive vehicles—directly within their web browsers, without requiring dedicated applications or heavy plugins.
+
+## Engineering the 3D Experience
+
+Creating a seamless 3D experience on the web requires balancing high-fidelity visuals with strict performance budgets to ensure compatibility across devices.
+
+- **WebGL & Three.js Integration**: Built the core rendering engine using WebGL and Three.js, allowing for the direct manipulation of 3D models, textures, and dynamic lighting within the DOM.
+- **Model Optimization**: Heavy 3D assets (GLTF/GLB formats) were significantly compressed and optimized using Draco compression. This reduced payload sizes, enabling near-instant load times even on mobile networks.
+- **Dynamic Camera Controls**: Implemented custom orbital controls that restrict camera panning and zooming to natural, product-focused angles, ensuring the user always has the best view.
+- **Responsive React Architecture**: Wrapped the entire 3D canvas within a modern React architecture, allowing UI overlays (like color pickers or feature toggles) to interact instantaneously with the 3D scene state.
 
 ## Key Features
 
-- **Immersive Product Displays**: High-resolution imagery combined with smooth CSS animations to bring products to life as the user scrolls.
-- **Dynamic Filtering**: A real-time, responsive filtering system that allows users to seamlessly sort through different product categories without page reloads.
-- **Minimalist UI/UX**: A design philosophy that puts the product front and center, utilizing ample whitespace and elegant typography.
-- **Responsive Architecture**: Fully optimized to maintain the premium showroom feel across desktops, tablets, and mobile devices.
+- **360-Degree Product Exploration**: Users can smoothly pan, tilt, and zoom around high-fidelity 3D models to inspect intricate details from any angle.
+- **Real-Time Customization**: A dynamic UI overlay allows users to instantly change product configurations—such as paint colors, materials, or accessories—and see the changes reflected immediately on the 3D model.
+- **Cross-Platform Performance**: Heavily optimized to maintain 60FPS rendering on both desktop graphics cards and mobile devices.
+- **Immersive Lighting & Shadows**: Utilized physically-based rendering (PBR) materials combined with dynamic environment maps to create realistic reflections and shadows.
 
-## The Approach
+## The Outcome
 
-Building a digital showroom required a deep focus on frontend performance. Serving large, high-quality images while maintaining 60fps animations meant optimizing asset delivery and leveraging modern CSS and React techniques to handle transitions cleanly. The result is an elegant, snappy, and visually stunning digital catalog.
+The 3D Showroom successfully demonstrates the future of digital retail. By merging high-performance web engineering with interactive 3D modeling, the project delivers an engaging, memorable user experience that bridges the gap between physical retail browsing and online convenience.
 
-### Exploring the Digital Space
+### Visualizing the Experience
 
-Here are snapshots showing the premium aesthetic of the digital showroom:
+Here are snapshots showing the interface and rendering quality of the interactive 3D showroom:
 
-![Product Display 1](/images/projects/project-showroom/Screenshot From 2026-06-10 01-28-40.png)
-*High-resolution visuals take center stage, allowing users to appreciate the fine details of the product.*
+![Main Showroom View](/images/projects/project-showroom/Screenshot 2024-05-18 013444.png)
+*The primary interactive canvas where users can explore the product in full 3D space.*
 
-![Dynamic Browsing](/images/projects/project-showroom/Screenshot From 2026-06-10 01-29-04.png)
-*A minimalist user interface ensures that navigation does not distract from the visual impact of the items on display.*
+![Product Detail View](/images/projects/project-showroom/Screenshot 2024-05-18 013626.png)
+*High-fidelity rendering of specific product components, showcasing the lighting and material reflections.*
 
-![Filtering Interface](/images/projects/project-showroom/Screenshot From 2026-06-10 02-18-16.png)
-*Seamless sorting and category filtering keep the user engaged without relying on full page reloads.*
+![Customization Interface](/images/projects/project-showroom/Screenshot 2024-05-18 013645.png)
+*The UI overlay that allows users to interact with the model, triggering animations or configuration changes.*

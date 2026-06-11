@@ -1,5 +1,7 @@
 import { MDXRemote, MDXRemoteProps } from "next-mdx-remote/rsc";
 import React, { ReactNode } from "react";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 
 import { SmartImage, SmartLink, Text } from "@/once-ui/components";
 import { CodeBlock } from "@/once-ui/modules";
@@ -140,6 +142,18 @@ const components = {
   a: CustomLink as any,
   Table,
   CodeBlock,
+  pre: ({ children, ...props }: any) => (
+    <div style={{ overflowX: "auto", maxWidth: "100%", borderRadius: "var(--static-space-8)" }}>
+      <pre {...props} style={{ minWidth: "max-content", padding: "var(--static-space-16)", backgroundColor: "var(--neutral-alpha-weak)", margin: 0 }}>
+        {children}
+      </pre>
+    </div>
+  ),
+  code: ({ children, ...props }: any) => (
+    <code {...props} style={{ fontFamily: "monospace", backgroundColor: "var(--neutral-alpha-weak)", padding: "0.2em 0.4em", borderRadius: "3px" }}>
+      {children}
+    </code>
+  ),
 };
 
 type CustomMDXProps = MDXRemoteProps & {
@@ -149,6 +163,15 @@ type CustomMDXProps = MDXRemoteProps & {
 export function CustomMDX(props: CustomMDXProps) {
   return (
     // @ts-ignore: Suppressing type error for MDXRemote usage
-    <MDXRemote {...props} components={{ ...components, ...(props.components || {}) }} />
+    <MDXRemote 
+      {...props} 
+      components={{ ...components, ...(props.components || {}) }} 
+      options={{
+        mdxOptions: {
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
+        },
+      }}
+    />
   );
 }

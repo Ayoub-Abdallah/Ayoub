@@ -3,6 +3,7 @@ title: "Orizon: Predictive Risk Analysis AI"
 publishedAt: "2026-06-05"
 summary: "An advanced enterprise decision system leveraging Federated and Multi-Modal Artificial Intelligence to predict and manage operational risks securely."
 images:
+  - "/images/projects/project-orizon/hero.png"
   - "/images/projects/project-orizon/dashboard_overview.png"
   - "/images/projects/project-orizon/alert_inbox.png"
   - "/images/projects/project-orizon/federation_status.png"
@@ -18,34 +19,45 @@ link: "https://orizon-dz.vercel.app/"
 
 ## Overview
 
-Orizon is a pioneering AI-driven decision system designed specifically for the complex risk-management needs of modern enterprises. Recognizing the limitations of centralized data processing and single-modality AI, I conceptualized and built Orizon around the principles of Federated Learning and Multi-Modal AI.
+Orizon is a pioneering AI-driven decision system designed specifically for the complex risk-management needs of modern enterprises. In today's highly interconnected corporate environments, risk is multifaceted and data is often siloed due to strict privacy regulations and security concerns. Recognizing the limitations of centralized data processing and single-modality AI, I conceptualized and built Orizon around the core principles of Federated Learning and Multi-Modal Artificial Intelligence.
 
-This platform allows organizations to securely analyze disparate, sensitive data sources—ranging from textual documents to structural time-series data—without compromising data privacy, ultimately driving intelligent, proactive risk mitigation.
+This platform empowers organizations to securely analyze disparate, highly sensitive data sources—ranging from unstructured textual documents and emails to structured time-series metrics and operational logs—without ever compromising data privacy or transferring raw data over external networks. By shifting the computational paradigm from moving data to the models, to moving models to the data, Orizon delivers intelligent, proactive risk mitigation on a global scale.
 
-## Key Features
+## The Architecture & Technology Stack
 
-- **Federated Learning Architecture**: Enables secure, decentralized training of AI models across various enterprise silos without ever sharing the raw sensitive data.
-- **Multi-Modal AI Engine**: Capable of ingesting and cross-analyzing different data types (text, metrics, operational logs) for a holistic view of potential risks.
-- **Dashboard Overview**: A central hub providing real-time risk scoring, predictive trend analysis, and actionable insights at a glance.
-- **Alert Inbox & Document Review**: Automated categorization and prioritization of risk alerts, backed by deep document analysis workflows.
-- **Sector View & Entity Drilldown**: Deep dive into specific departments, sectors, or external entities to trace the root cause of predicted risks.
+The engineering behind Orizon was driven by the need for absolute security, real-time performance, and scalable machine learning operations.
+
+- **Federated Learning Infrastructure**: Implemented a decentralized training topology using Python and PyTorch. Instead of a central data lake, edge nodes train local models on proprietary data, and only the cryptographic weight updates are aggregated centrally. This ensures zero-trust compliance with stringent data governance laws.
+- **Multi-Modal AI Engine**: Engineered a hybrid neural architecture capable of ingesting diverse data types. Natural Language Processing (NLP) pipelines parse risk factors from corporate communications, while deep sequence models evaluate operational metrics, fusing them into a unified risk score.
+- **Next.js & React Frontend**: The complex, data-heavy interfaces were built using Next.js and React, prioritizing fluid data visualization and responsive dashboards that can render thousands of data points without UI blocking.
+- **Real-Time WebSocket Sync**: Leveraged WebSocket protocols to stream real-time updates regarding federated node connectivity and alert generation directly to the client dashboard.
+
+## Key Features & Business Impact
+
+- **Predictive Risk Scoring**: Translates complex, multi-modal data inferences into an easily digestible 1-100 risk score, allowing executives to identify vulnerable sectors before issues escalate.
+- **Federated Status Monitoring**: Provides IT and Security teams with real-time visibility into the health, sync status, and contribution weight of distributed training nodes.
+- **Automated Alert Inbox & Document Review**: Uses AI to automatically categorize, prioritize, and flag risk alerts. The system highlights specific paragraphs or metrics in source documents, drastically reducing human review time.
+- **Sector & Entity Drilldown**: Offers a granular, hierarchical view of risk. Managers can start at a global sector overview and drill down into specific regional entities, tracing the predictive confidence scores back to historical trends.
 
 ## The Vision
 
-Orizon represents the future of secure corporate intelligence. By moving the model to the data rather than the data to the model, Orizon ensures compliance with strict data governance while still benefiting from state-of-the-art predictive capabilities.
+Orizon represents the future of secure corporate intelligence. It proves that organizations do not have to choose between robust data privacy and state-of-the-art predictive capabilities. By continuously refining the federated aggregation algorithms and expanding the supported data modalities, Orizon is positioned to become the central nervous system for enterprise risk management.
 
 ### Visualizing Orizon's Capabilities
 
-Below are a few key snapshots from the platform that showcase its comprehensive risk management capabilities:
+Below are a few key snapshots from the platform that showcase its comprehensive risk management interfaces and professional aesthetic:
+
+![Dashboard Overview](/images/projects/project-orizon/dashboard_overview.png)
+*The central dashboard provides an immediate, high-level summary of active risks, recent alerts, and global operational health.*
 
 ![Federation Status](/images/projects/project-orizon/federation_status.png)
-*Real-time monitoring of federated node connectivity and sync status, ensuring distributed models are always up to date.*
+*Real-time monitoring of federated node connectivity and sync status, ensuring distributed models are continuously learning without data exposure.*
 
 ![Sector View](/images/projects/project-orizon/sector_view.png)
-*Detailed sector-level risk breakdowns allow managers to pinpoint which parts of the organization are most vulnerable.*
+*Detailed sector-level risk breakdowns allow managers to quickly pinpoint which departments or regions are most vulnerable.*
 
 ![Entity Drilldown](/images/projects/project-orizon/entity_drilldown.png)
-*An in-depth drilldown on specific entities, highlighting historical risk trends and predictive confidence scores.*
+*An in-depth drilldown on specific entities, highlighting historical risk trends, predictive confidence scores, and contributing factors.*
 
 ![Alert Inbox](/images/projects/project-orizon/alert_inbox.png)
-*The centralized inbox where AI-generated alerts are categorized by severity and status, allowing human reviewers to step in.*
+*The centralized inbox where AI-generated alerts are categorized by severity and status, allowing human reviewers to step in efficiently.*

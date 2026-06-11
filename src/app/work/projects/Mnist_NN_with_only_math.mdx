@@ -23,23 +23,23 @@ By implementing each component manually, I gained insights that are often hidden
 
 ### Layer Computations
 
-For any layer `$l$`:
+For any layer $l$:
 
-`$ z^{[l]} = W^{[l]}a^{[l-1]} + b^{[l]} $`
+$$ z^{[l]} = W^{[l]}a^{[l-1]} + b^{[l]} $$
 
-`$ a^{[l]} = g(z^{[l]}) $`
+$$ a^{[l]} = g(z^{[l]}) $$
 
 **Deep Dive**:
-- The `$ z^{[l]} $` term represents the "pre-activation" at layer `$ l $` - the weighted sum of inputs plus a bias term
-- `$ W^{[l]} $` is the weight matrix that transforms inputs from layer `$ l-1 $` to layer `$ l $`
-- `$ a^{[l-1]} $` contains the activated outputs from the previous layer
-- `$ b^{[l]} $` is the bias vector that allows shifting the activation threshold
-- `$ g() $` is the nonlinear activation function that enables the network to learn complex patterns
+- The $z^{[l]}$ term represents the "pre-activation" at layer $l$ - the weighted sum of inputs plus a bias term
+- $W^{[l]}$ is the weight matrix that transforms inputs from layer $l-1$ to layer $l$
+- $a^{[l-1]}$ contains the activated outputs from the previous layer
+- $b^{[l]}$ is the bias vector that allows shifting the activation threshold
+- $g()$ is the nonlinear activation function that enables the network to learn complex patterns
 
 ### Activation Functions
 
 **ReLU (Rectified Linear Unit)**:
-`$ g(z) = \max(0, z) $`
+$$ g(z) = \max(0, z) $$
 
 **Why ReLU?**
 1. Avoids the vanishing gradient problem common in sigmoid/tanh
@@ -48,7 +48,7 @@ For any layer `$l$`:
 4. Biological plausibility - resembles the firing rate of neurons
 
 **Softmax (Output Layer)**:
-`$ \sigma(z_i) = \frac{e^{z_i}}{\sum_{j=1}^K e^{z_j}} $`
+$$ \sigma(z_i) = \frac{e^{z_i}}{\sum_{j=1}^K e^{z_j}} $$
 
 **Softmax Properties**:
 - Converts raw scores (logits) into probabilities
@@ -59,13 +59,13 @@ For any layer `$l$`:
 ### Loss Function
 
 Cross-entropy loss:
-`$ L = -\frac{1}{m}\sum_{i=1}^m \sum_{k=1}^K y_k^{(i)}\log(\hat y_k^{(i)}) $`
+$$ L = -\frac{1}{m}\sum_{i=1}^m \sum_{k=1}^K y_k^{(i)}\log(\hat y_k^{(i)}) $$
 
 **Components Explained**:
-- `$ m $`: Number of training examples in the batch
-- `$ K $`: Number of output classes
-- `$ y_k^{(i)} $`: True label (1 if example `$ i $` belongs to class `$ k $`, else 0)
-- `$ \hat y_k^{(i)} $`: Predicted probability for class `$ k $`
+- $m$: Number of training examples in the batch
+- $K$: Number of output classes
+- $y_k^{(i)}$: True label (1 if example $i$ belongs to class $k$, else 0)
+- $\hat y_k^{(i)}$: Predicted probability for class $k$
 - The log term heavily penalizes confident wrong predictions
 
 ## Implementation Highlights
@@ -197,5 +197,3 @@ Building a neural network from scratch provided invaluable insights that framewo
 4. **Hyperparameters** interact in complex ways that theory alone doesn't predict
 
 This implementation, while not production-grade, captures the essence of deep learning systems. The knowledge gained forms a solid foundation for understanding more advanced architectures and optimization techniques. Future work could explore momentum, adaptive learning rates, and more sophisticated initialization schemes.
-
-```
