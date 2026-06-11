@@ -72,9 +72,7 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        I engineer scalable tech solutions, blending AI, full-stack development, and intuitive UI/UX
-        design. Specializing in Python, JavaScript, React, and Next.js, I bring innovation to software
-        development and product design.
+        Full-Stack Software Engineer with 4+ years of experience designing and deploying scalable web architectures and AI-powered solutions. Expert in JavaScript/TypeScript, Node.js, React, MongoDB, and cloud-native best practices. Passionate about translating user needs into maintainable, high-impact applications that drive digital transformation.
       </>
     ),
   },
@@ -82,6 +80,39 @@ const about = {
     display: true,
     title: "Work Experience",
     experiences: [
+      {
+        company: "Black and Yellow",
+        timeframe: "2024 - Oct 2025",
+        role: "Software Engineer",
+        achievements: [
+          <>Designed and launched enterprise software systems, PMS and CRM, driving a 40% increase in productivity and enhancing client satisfaction by 50% through better data management.</>,
+          <>Led the development and delivery of real-time property and client data interfaces using Next.js and Redux, boosting user engagement, improving data accessibility, and increasing operational efficiency by 20%.</>,
+          <>Collaborated with hotel management to design and implement custom features using C# and Agile methods, improving user satisfaction, streamlining operations, and raising hotel efficiency and guest experience quality.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "Massinissa International Academy",
+        timeframe: "2024 - Present",
+        role: "Computer Skills Trainer",
+        achievements: [
+          <>Led and delivered hands-on workshops in foundational computing and Microsoft Office, helping learners build practical digital skills and improve day-to-day workflow efficiency.</>,
+          <>Designed and delivered a complete training curriculum for the Data Entry Agent certification, equipping students with strong data-management, formatting, and accuracy-focused competencies.</>,
+          <>Provided clear, structured instruction through step-by-step lessons, practice modules, and guided exercises that improved learners' confidence and independence.</>,
+          <>Supported learners through assessments and personalized feedback, helping them strengthen weak areas and progress steadily throughout the program.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "Independent",
+        timeframe: "2020 - Present",
+        role: "Freelance Full-Stack Developer",
+        achievements: [
+          <>Developed and implemented custom full-stack solutions for clients in healthcare, education, real estate, and tourism, leading to higher website traffic, greater user interaction, and streamlined daily operations.</>,
+          <>Managed full development lifecycle—from architecture to deployment and maintenance—resulting in 40% faster release cycles and a 25% reduction in post-launch bugs.</>,
+        ],
+        images: [],
+      },
       {
         company: "ORIZON",
         timeframe: "2025 - Present",
@@ -95,26 +126,6 @@ const about = {
         ],
       },
       {
-        company: "Black & Yellow",
-        timeframe: "2025 - 2026",
-        role: "Software Engineer",
-        achievements: [
-          <>Development of CRM and CMS platforms, streamlining workflows and boosting user engagement.</>,
-          <>Design and implementation of machine learning pipelines to integrate AI-driven features, automating key processes and insights.</>,
-        ],
-        images: [],
-      },
-      {
-        company: "Massinissa International Academy",
-        timeframe: "2024 - Present",
-        role: "Coach (Data Entry Agents)",
-        achievements: [
-          <>Optimized training programs, increasing efficiency by 25%.</>,
-          <>Developed streamlined workflows for faster onboarding.</>,
-        ],
-        images: [],
-      },
-      {
         company: "SkillLab",
         timeframe: "2025 - Present",
         role: "Founder",
@@ -126,16 +137,6 @@ const about = {
           { src: "/images/projects/project-skilllab/skilllab.png", alt: "SkillLab", width: 16, height: 9 }
         ],
       },
-      {
-        company: "Freelance",
-        timeframe: "2020 - Present",
-        role: "Full-Stack Developer",
-        achievements: [
-          <>Delivered high-performance web & mobile apps across industries.</>,
-          <>Built AI-integrated solutions using React.js, Next.js, and Python.</>,
-        ],
-        images: [],
-      },
     ],
   },
   studies: {
@@ -143,17 +144,13 @@ const about = {
     title: "Education",
     institutions: [
       {
-        name: "Bachelor's Degree",
-        description: <>Earned a Bachelor's degree in Software Engineering from Constantine 2 University.</>,
+        name: "Master's Degree, Data Science & Artificial Intelligence",
+        description: <>Pursuing a Master's Degree at the University of Constantine 2, focusing on advanced AI and data science (Sep 2024 - Present).</>,
       },
       {
-        name: "Master's Degree",
-        description: <>Currently pursuing a Master's degree in Data Science and Artificial Intelligence at Constantine 2 University.</>,
+        name: "Bachelor of Science in Computer Science",
+        description: <>Earned a Bachelor's Degree in Computer Science, Specialization in Software Engineering, from the University of Constantine 2 (Sep 2021 - May 2024).</>,
       },
-      {
-        name: "Self-Study",
-        description: <>Constantly refining expertise in full-stack and AI development through self-directed learning.</>,
-      }
     ],
   },
   technical: {
@@ -161,18 +158,18 @@ const about = {
     title: "Technical Skills",
     skills: [
       {
-        title: "Full-Stack Development",
-        description: <>Expert in Python, JavaScript, React, and Next.js for scalable software.</>,
+        title: "Programming Languages & Frontend",
+        description: <>Expert in JavaScript (ES6+), TypeScript, Python, Java, SQL, and C#. Frontend expertise includes React.js, Next.js, Angular, Redux, Tailwind CSS, HTML5/CSS3/SCSS, and Vue.js.</>,
         images: [],
       },
       {
-        title: "Machine Learning & AI",
-        description: <>Developing AI models with TensorFlow, PyTorch, and advanced data science techniques.</>,
+        title: "Backend & Databases",
+        description: <>Building scalable backends with Node.js, NestJS, Express.js, Django, Spring Boot, REST APIs, and WebSockets. Database management with MongoDB, MySQL, PostgreSQL, Firebase, Redis, and Elasticsearch.</>,
         images: [],
       },
       {
-        title: "UI/UX Design",
-        description: <>Crafting seamless digital experiences with Figma and front-end development.</>,
+        title: "Machine Learning & DevOps",
+        description: <>Developing AI models with TensorFlow, Keras, Scikit-learn, Pandas, and NumPy. Proficient in Git, Docker, GitHub Actions, Vercel, Postman, CI/CD, Figma, and Agile/Scrum methodologies.</>,
         images: [],
       },
     ],
